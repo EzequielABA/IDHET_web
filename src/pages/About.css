@@ -1,0 +1,96 @@
+.about-page {
+    margin-top: -80px;
+}
+
+.section {
+    padding: var(--spacing-20) 0;
+}
+
+.bg-gray-100 {
+    background-color: var(--color-gray-50);
+}
+
+.about-content-box {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+.about-lead {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-800);
+}
+
+.about-content-box p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-gray-700);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-8);
+}
+
+.mission-card,
+.vision-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    padding: var(--spacing-10);
+}
+
+.mv-icon {
+    font-size: 80px;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-primary-purple);
+}
+
+.mission-card h3,
+.vision-card h3 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-2);
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-gray-700);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.value-card {
+    padding: var(--spacing-8);
+}
+
+.value-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-purple);
+    margin-bottom: var(--spacing-3);
+}
+
+.value-description {
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 767px) {
+
+    .mission-vision-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

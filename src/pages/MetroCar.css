@@ -1,0 +1,128 @@
+.metrocar-page {
+    margin-top: -80px;
+}
+
+.section {
+    padding: var(--spacing-20) 0;
+}
+
+.bg-gray-100 {
+    background-color: var(--color-gray-50);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.step-card {
+    text-align: center;
+    padding: var(--spacing-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+}
+
+.step-description {
+    color: var(--color-gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+    padding: var(--spacing-6);
+}
+
+.benefit-emoji {
+    font-size: 48px;
+    flex-shrink: 0;
+    color: var(--color-primary-purple);
+}
+
+.benefit-item h4 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-2);
+}
+
+.benefit-item p {
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bg-gradient {
+    background: var(--gradient-hero);
+}
+
+.cta-content {
+    text-align: center;
+    color: var(--color-white);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-4);
+}
+
+.cta-description {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-8);
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+
+    .steps-grid,
+    .benefits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+        font-size: var(--font-size-3xl);
+    }
+}

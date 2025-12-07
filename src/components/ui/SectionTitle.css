@@ -1,0 +1,25 @@
+.section-title {
+    margin-bottom: var(--spacing-12);
+}
+
+.section-subtitle {
+    color: var(--color-primary-purple);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: var(--spacing-2);
+}
+
+.section-heading {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: var(--font-size-5xl);
+    }
+}
