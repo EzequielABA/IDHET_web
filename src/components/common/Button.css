@@ -76,7 +76,7 @@
 }
 
 .btn-outlined {
-    background: transparent;
+    background: #FFFF;
     color: var(--color-primary-purple);
     border: 2px solid var(--color-primary-purple);
     box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
