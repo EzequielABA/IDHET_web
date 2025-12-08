@@ -6,6 +6,7 @@ import SectionTitle from '../components/ui/SectionTitle';
 import FAQItem from '../components/ui/FAQItem';
 import Button from '../components/common/Button';
 import Icon from '../components/ui/Icon';
+import Carousel from '../components/ui/Carousel';
 import { solutions } from '../data/solutions.data';
 import { benefits } from '../data/benefits.data';
 import { testimonials } from '../data/testimonials.data';
@@ -136,7 +137,9 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="metrocard-visual">
-                            <div className="metrocard-mockup"><FaMobileAlt size={80} /></div>
+                            <div className="metrocard-mockup">
+                                <img src="/assets/images/metrocard-mockup.png" alt="MetroCard App" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,30 +180,38 @@ const Home = () => {
                         title="Lo que dicen nuestros usuarios"
                         gradient
                     />
-                    <div className={`testimonials-grid ${isVisibleTestimonials ? 'animate-fadeInUp' : ''}`}>
-                        {testimonials.slice(0, 3).map((testimonial, index) => (
-                            <Card
-                                key={testimonial.id}
-                                hoverable
-                                className={`testimonial-card delay-${(index + 1)}00`}
-                            >
-                                <div className="testimonial-content">
-                                    <div className="testimonial-avatar" style={{ background: testimonial.gradient }}>
-                                        <Icon name={testimonial.avatar} size={40} color="white" />
+                    <div className={`testimonials-carousel ${isVisibleTestimonials ? 'animate-fadeInUp' : ''}`}>
+                        <Carousel
+                            autoPlay={true}
+                            interval={4000}
+                            showArrows={true}
+                            showDots={true}
+                            pauseOnHover={true}
+                        >
+                            {testimonials.map((testimonial) => (
+                                <Card
+                                    key={testimonial.id}
+                                    hoverable
+                                    className="testimonial-card-carousel"
+                                >
+                                    <div className="testimonial-content">
+                                        <div className="testimonial-avatar" style={{ background: testimonial.gradient }}>
+                                            <Icon name={testimonial.avatar} size={48} color="white" />
+                                        </div>
+                                        <p className="testimonial-text">"{testimonial.content}"</p>
+                                        <div className="testimonial-author">
+                                            <strong>{testimonial.name}</strong>
+                                            <span>{testimonial.role}</span>
+                                        </div>
+                                        <div className="testimonial-rating">
+                                            {Array.from({ length: testimonial.rating }).map((_, i) => (
+                                                <FaStar key={i} color="#FFD700" size={20} />
+                                            ))}
+                                        </div>
                                     </div>
-                                    <p className="testimonial-text">"{testimonial.content}"</p>
-                                    <div className="testimonial-author">
-                                        <strong>{testimonial.name}</strong>
-                                        <span>{testimonial.role}</span>
-                                    </div>
-                                    <div className="testimonial-rating">
-                                        {Array.from({ length: testimonial.rating }).map((_, i) => (
-                                            <FaStar key={i} color="#FFD700" size={18} />
-                                        ))}
-                                    </div>
-                                </div>
-                            </Card>
-                        ))}
+                                </Card>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
             </section>

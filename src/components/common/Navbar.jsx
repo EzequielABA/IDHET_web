@@ -30,7 +30,9 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
             <div className="navbar-container container">
                 <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                    <span className="logo-text gradient-text">IDHET</span>
+                    <span className="logo-text gradient-text">
+                        <img src="assets/images/logo.png" alt="" style={{ width: '100px', height: 'auto' }} />
+                    </span>
                 </Link>
 
                 {/* Desktop Navigation */}

@@ -3,7 +3,7 @@ export const navigationLinks = [
     { path: '/', label: 'Inicio' },
     { path: '/about', label: 'Nosotros' },
     { path: '/solutions', label: 'Soluciones' },
-    { path: '/metrocard', label: 'MetroCard' },
+    { path: '/metrocard', label: 'MoveCard' },
     { path: '/faq', label: 'Preguntas' },
     { path: '/contact', label: 'Contacto' }
 ];
@@ -25,8 +25,8 @@ export const footerLinks = {
 };
 
 export const socialLinks = [
-    { platform: 'Facebook', url: '#', icon: 'facebook' },
-    { platform: 'Twitter', url: '#', icon: 'twitter' },
-    { platform: 'Instagram', url: '#', icon: 'instagram' },
-    { platform: 'LinkedIn', url: '#', icon: 'linkedin' }
+    { platform: 'Facebook', url: 'https://www.facebook.com/share/17tDh7S8pH/', icon: 'facebook' },
+    { platform: 'Twitter', url: 'https://x.com/IDHETSRL?t=djreVxcWS8XlawReHJiRSg&s=09', icon: 'twitter' },
+    { platform: 'Instagram', url: 'https://www.instagram.com/idhet.srl?igsh=MWQ2NWx1b2VhY2g5ZA==', icon: 'instagram' },
+    { platform: 'LinkedIn', url: '', icon: 'linkedin' }
 ];

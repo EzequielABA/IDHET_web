@@ -18,10 +18,10 @@ const Footer = () => {
                             Soluciones digitales que simplifican la vida cotidiana en República Dominicana.
                         </p>
                         <div className="footer-social">
-                            <a href="#" className="social-link" aria-label="Facebook"><FaFacebook /></a>
-                            <a href="#" className="social-link" aria-label="Twitter"><FaTwitter /></a>
-                            <a href="#" className="social-link" aria-label="Instagram"><FaInstagram /></a>
-                            <a href="#" className="social-link" aria-label="LinkedIn"><FaLinkedin /></a>
+                            <a href="https://www.facebook.com/share/17tDh7S8pH/" className="social-link" aria-label="Facebook"><FaFacebook /></a>
+                            <a href="ttps://x.com/IDHETSRL?t=djreVxcWS8XlawReHJiRSg&s=09" className="social-link" aria-label="Twitter"><FaTwitter /></a>
+                            <a href="https://www.instagram.com/idhet.srl?igsh=MWQ2NWx1b2VhY2g5ZA==" className="social-link" aria-label="Instagram"><FaInstagram /></a>
+                            <a href="" className="social-link" aria-label="LinkedIn"><FaLinkedin /></a>
                         </div>
                     </div>
 
