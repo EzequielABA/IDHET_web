@@ -9,10 +9,11 @@ const About = () => {
     return (
         <div className="about-page">
             <Hero
-                title="Sobre IDHET"
+                title="Sobre IDHET SRL"
                 subtitle="Nuestra Historia"
                 description="Somos una empresa tecnológica dominicana comprometida con simplificar la vida cotidiana a través de soluciones digitales innovadoras."
                 gradient
+                decor="grid"
             />
 
             <section className="about-story-section section">
@@ -34,7 +35,7 @@ const About = () => {
                             urbana y pagos electrónicos.
                         </p>
                         <p>
-                            Nuestro primer gran logro, <strong>MetroCard</strong>, revolucionó la forma en que los
+                            Nuestro primer gran logro, <strong>MoveCard</strong>, revolucionó la forma en que los
                             usuarios del Metro y Teleférico de Santo Domingo recargan sus tarjetas. Hoy, somos la
                             única plataforma que permite hacer este proceso completamente online, en menos de 30
                             segundos y desde cualquier lugar.

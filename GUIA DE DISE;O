@@ -1,0 +1,208 @@
+PROMPT PARA REDISEÑO COMPLETO DEL SITIO WEB - ESTILO PROFESIONAL INSTITUCIONAL MODERNO
+Necesito que rediseñes COMPLETAMENTE este sitio web desde cero con un enfoque profesional e institucional pero MODERNO. El diseño actual es genérico y saturado. Quiero un diseño limpio, elegante, corporativo pero contemporáneo que transmita confianza y profesionalismo.
+PALETA DE COLORES CORPORATIVA (Usar con MODERACIÓN y ELEGANCIA):
+
+Color Primario: #741BF2 (Violeta) - Usar SOLO para CTAs principales y acentos estratégicos
+Color Secundario: #2350D9 (Azul Profundo) - Usar para elementos secundarios, íconos
+Color Acento Sutil: #A7DDF2 (Azul Claro) - Usar para fondos suaves de secciones
+Color Acento Menta: #BDF2E8 (Menta) - Usar MUY sutilmente para detalles
+Color Magenta: #F238E6 - Usar SOLO en el logo y ocasionalmente en hover states
+
+FILOSOFÍA DE COLOR:
+
+Fondo principal: Blanco (#FFFFFF) o gris muy claro (#F8F9FA)
+Texto principal: Gris oscuro (#1F2937) o negro suave (#0F172A)
+Usar los colores corporativos de forma ESTRATÉGICA, no abundante
+Máximo 20% de la página debe tener colores vibrantes
+El resto debe ser neutro, limpio y espacioso
+
+REQUISITOS DE DISEÑO VISUAL:
+
+Estética Profesional Moderna:
+
+Fondo predominantemente blanco o gris muy claro
+Tipografía profesional (Inter, Outfit, Plus Jakarta Sans, o Poppins)
+Espaciado GENEROSO entre secciones (80-120px de padding)
+Líneas sutiles y divisores delicados en gris claro (#E5E7EB)
+Sombras suaves y minimalistas (box-shadow sutiles, NO glow effects)
+Bordes redondeados moderados (border-radius: 8-12px)
+Grid limpio y organizado
+
+
+Interactividad Sutil y Profesional:
+
+Animaciones SUAVES y discretas en scroll (fade-in, slide-up)
+Hover effects SUTILES: cambio de sombra, ligero scale (1.02), NO cambios de color dramáticos
+Transiciones de 0.3s ease
+Botones con hover que oscurezca ligeramente el color, sin brillos
+Efectos de elevación (lift) en tarjetas al hover
+NO efectos neon, NO glow effects, NO brillos exagerados
+
+
+Componentes Dinámicos PROFESIONALES Requeridos:
+
+Hero Section Limpio:
+
+Fondo blanco o con gradiente MUY sutil de grises
+Título en gris oscuro, NO en colores
+Subtítulo en gris medio
+UN solo botón CTA en #741BF2
+Imagen/ilustración profesional o fondo con formas geométricas sutiles
+
+
+Slider/Carousel Elegante:
+
+Diseño minimalista con controles discretos
+Indicadores simples en gris, activo en #741BF2
+Transiciones suaves sin efectos llamativos
+
+
+Tarjetas Corporativas:
+
+Fondo blanco con borde sutil
+Sombra ligera que se eleva al hover
+Ícono en color corporativo (#2350D9 o #741BF2)
+Texto en grises
+NO efectos de glow o cambios de color dramáticos
+
+
+Navegación Profesional:
+
+Fondo blanco con sombra sutil al hacer scroll
+Logo con colores corporativos
+Links en gris oscuro, hover con underline en #741BF2
+Sticky con backdrop blur MUY sutil
+
+
+Sección de Estadísticas:
+
+Números grandes en gris oscuro
+Counters animados sutilmente
+Descripción en gris medio
+Fondo con color corporativo MUY claro (#A7DDF2 al 10% opacity)
+
+
+Formulario Empresarial:
+
+Inputs con bordes grises limpios
+Focus state con borde en #741BF2
+Labels en gris medio
+Botón submit en color corporativo
+Validación con mensajes claros
+
+
+Grid de Servicios/Productos:
+
+Layout en grid limpio
+Imágenes de alta calidad
+Overlay sutil al hover (NO colores vibrantes)
+Descripción clara y legible
+
+
+
+
+Fondos Dinámicos SUTILES (Lo único llamativo permitido):
+
+Formas geométricas flotantes en el fondo (círculos, cuadrados) en colores corporativos con 5-10% opacity
+Gradientes sutiles de fondo usando #A7DDF2 y #BDF2E8 con muy baja saturación
+Efecto parallax suave en hero section
+Blob shapes animadas sutilmente en el fondo
+Líneas o grid pattern muy sutil
+
+
+
+ESTRUCTURA Y UX PROFESIONAL:
+
+Hero Section Institucional:
+
+Título claro y directo en gris oscuro
+Subtítulo explicativo
+CTA principal único y visible
+Imagen profesional o ilustración corporativa
+Fondo dinámico sutil (formas geométricas de bajo contraste)
+
+
+Secciones Alternas:
+
+Alternar fondo blanco con gris muy claro (#F9FAFB)
+Secciones con fondos sutiles en #A7DDF2 al 5-8% opacity
+Separadores con líneas delgadas o espacios en blanco
+
+
+Componentes de Acción:
+
+Botones primarios: #741BF2, hover ligeramente más oscuro
+Botones secundarios: Outline gris, hover con fondo gris claro
+Enlaces: Gris oscuro, underline en #2350D9 al hover
+
+
+Jerarquía Visual Clara:
+
+H1: 48-56px, peso 700, gris oscuro
+H2: 36-40px, peso 600, gris oscuro
+H3: 24-28px, peso 600, gris medio-oscuro
+Body: 16-18px, peso 400, gris medio
+Colores corporativos SOLO en elementos de acción e íconos
+
+
+
+TECNOLOGÍAS:
+
+React con hooks modernos
+CSS moderno:
+
+CSS Grid y Flexbox para layouts limpios
+Custom Properties para mantener consistencia
+Animaciones CSS sutiles (transform, opacity)
+NO usar filtros de blur excesivos o efectos pesados
+
+
+
+EJEMPLO DE PALETA EN CSS:
+css:root {
+  /* Colores Corporativos - Usar con moderación */
+  --primary: #741BF2;
+  --secondary: #2350D9;
+  --accent-light: #A7DDF2;
+  --accent-mint: #BDF2E8;
+  --brand-magenta: #F238E6; /* Solo logo */
+  
+  /* Colores Base - Usar abundantemente */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --bg-tertiary: #F3F4F6;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #94A3B8;
+  
+  --border: #E2E8F0;
+  
+  /* Sombras sutiles */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+LO QUE NO QUIERO:
+
+Títulos con gradientes de color
+Textos en colores vibrantes
+Efectos neon o glow
+Múltiples colores compitiendo por atención
+Saturación visual con colores por todos lados
+Animaciones exageradas o llamativas
+Fondos oscuros con colores neón
+
+LO QUE SÍ QUIERO:
+
+Diseño limpio tipo "Apple", "Notion", "Stripe"
+Mucho espacio en blanco (whitespace)
+Colores corporativos usados estratégicamente
+Fondos dinámicos pero sutiles
+Profesionalismo y elegancia
+Modernidad sin perder seriedad
+
+INSPIRACIÓN:
+Sitios como: Stripe, Notion, Linear, Figma (en su versión corporativa), Shopify, Atlassian. Profesional, limpio, moderno, con toques de color estratégicos.
+ENTREGABLE:
+Un rediseño completo profesional e institucional. El 80% de la página debe ser neutral (blancos, grises). Los colores corporativos deben aparecer SOLO en: logo, botones principales, algunos íconos, y detalles estratégicos. Los fondos dinámicos deben ser sutiles y no distraer del contenido. El resultado debe verse como una empresa seria, confiable y moderna.

@@ -9,16 +9,17 @@ const Hero = ({
     primaryCTA,
     secondaryCTA,
     gradient = true,
+    decor = 'default',
     children
 }) => {
     const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
     return (
-        <section className="hero" ref={ref}>
+        <section className={`hero hero--decor-${decor}`} ref={ref}>
             <div className="hero-gradient-bg"></div>
             <div className="hero-container container">
                 <div className={`hero-content ${isVisible ? 'animate-fadeInUp' : ''}`}>
-                    {subtitle && <p className="hero-subtitle">{subtitle}</p>}
+                    {subtitle && <p className="hero-subtitle">{subtitle.replace('IDHET', 'IDHET SRL')}</p>}
                     <h1 className={`hero-title ${gradient ? 'gradient-text' : ''}`}>
                         {title}
                     </h1>

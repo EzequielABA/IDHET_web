@@ -3,7 +3,8 @@ import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Solutions from '../pages/Solutions';
-import MetroCar from '../pages/MetroCar';
+import Services from '../pages/Services';
+import MoveCard from '../pages/MoveCard';
 import FAQ from '../pages/FAQ';
 import Contact from '../pages/Contact';
 import PrivacyPolicy from '../pages/legal/PrivacyPolicy';
@@ -19,7 +20,8 @@ const AppRoutes = () => {
                     <Route index element={<Home />} />
                     <Route path={ROUTES.ABOUT} element={<About />} />
                     <Route path={ROUTES.SOLUTIONS} element={<Solutions />} />
-                    <Route path={ROUTES.METROCARD} element={<MetroCar />} />
+                    <Route path={ROUTES.SERVICES} element={<Services />} />
+                    <Route path={ROUTES.MOVECARD} element={<MoveCard />} />
                     <Route path={ROUTES.FAQ} element={<FAQ />} />
                     <Route path={ROUTES.CONTACT} element={<Contact />} />
                     <Route path={ROUTES.PRIVACY_POLICY} element={<PrivacyPolicy />} />

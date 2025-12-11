@@ -1,25 +1,52 @@
 .section-title {
     margin-bottom: var(--spacing-12);
+    text-align: center;
 }
 
 .section-subtitle {
-    color: var(--color-primary-purple);
+    color: var(--primary);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-sm);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: var(--spacing-2);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-3);
 }
 
 .section-heading {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-extrabold);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-4);
+    letter-spacing: -0.02em;
+}
+
+/* Gradient text enabled with vibrant colors */
+.section-heading.gradient-text {
+    background: linear-gradient(90deg, #DB42EA, #A443F2, #3A53DE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: sectionGradient 4s ease-in-out infinite;
+}
+
+@keyframes sectionGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (min-width: 768px) {
     .section-heading {
-        font-size: var(--font-size-5xl);
+        font-size: var(--font-size-4xl);
     }
 }

@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Professional Institutional Design - Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import './reset.css';
 @import './variables.css';
@@ -20,14 +20,20 @@ body {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-normal);
-    color: var(--color-gray-900);
-    background-color: var(--color-gray-50);
+    color: var(--text-secondary);
+    background: var(--bg-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
-/* Typography */
+/* Subtle animated gradient background across pages */
+body::before {
+    content: '';
+    display: none;
+}
+
+/* Professional Typography */
 h1,
 h2,
 h3,
@@ -37,6 +43,8 @@ h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
     margin: 0;
+    color: var(--text-primary);
+    letter-spacing: -0.025em;
 }
 
 h1 {
@@ -46,67 +54,74 @@ h1 {
 
 h2 {
     font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
 }
 
 h3 {
     font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
 }
 
 h4 {
     font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
 }
 
 h5 {
     font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
 }
 
 h6 {
     font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
 }
 
 p {
     margin: 0;
     line-height: var(--line-height-relaxed);
+    color: var(--text-secondary);
 }
 
 a {
-    color: var(--color-primary-blue);
+    color: var(--text-primary);
     text-decoration: none;
     transition: color var(--transition-base);
 }
 
 a:hover {
-    color: var(--color-primary-purple);
+    color: var(--primary);
 }
 
-/* Selection */
+/* Subtle Selection */
 ::selection {
-    background-color: var(--color-primary-pink);
-    color: var(--color-white);
+    background-color: rgba(116, 27, 242, 0.15);
+    color: var(--text-primary);
 }
 
 ::-moz-selection {
-    background-color: var(--color-primary-pink);
-    color: var(--color-white);
+    background-color: rgba(116, 27, 242, 0.15);
+    color: var(--text-primary);
 }
 
-/* Scrollbar */
+/* Clean Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-gray-100);
+    background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--color-primary-pink), var(--color-primary-purple));
+    background: var(--border-medium);
     border-radius: var(--radius-full);
+    border: 3px solid var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--color-primary-purple), var(--color-primary-blue));
+    background: var(--primary);
 }
 
 /* App Container */
@@ -116,32 +131,57 @@ a:hover {
     flex-direction: column;
 }
 
-/* Focus Visible */
+/* Subtle Focus */
 *:focus-visible {
-    outline: 2px solid var(--color-primary-purple);
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
-}
-
-/* Smooth Transitions */
-* {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
 }
 
 /* Image Optimization */
 img {
-    height: auto;
+    display: block;
     max-width: 100%;
+    height: auto;
 }
 
 /* Button Reset */
 button {
     font-family: inherit;
+    cursor: pointer;
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-6);
+}
+
+.section {
+    padding: var(--spacing-24) 0;
+    position: relative;
+}
+
+/* Background Utilities */
+.bg-white {
+    background: var(--bg-primary);
+}
+
+.bg-gray {
+    background: var(--bg-secondary);
+}
+
+.bg-light-blue {
+    background: rgba(167, 221, 242, 0.05);
 }
 
 /* Responsive Typography */
 @media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
     h1 {
         font-size: var(--font-size-4xl);
     }
@@ -152,5 +192,9 @@ button {
 
     h3 {
         font-size: var(--font-size-2xl);
+    }
+
+    .section {
+        padding: var(--spacing-16) 0;
     }
 }

@@ -1,48 +1,57 @@
 :root {
-    /* Brand Colors - IDHET Palette */
-    --color-primary-pink: #F238E6;
-    --color-primary-purple: #741BF2;
-    --color-primary-blue: #2350D9;
-    --color-accent-light-blue: #A7DDF2;
-    --color-accent-mint: #BDF2E8;
+    /* ============================================
+       CORPORATE COLORS - USE STRATEGICALLY (20% MAX)
+       ============================================ */
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--color-primary-pink), var(--color-primary-purple));
-    --gradient-secondary: linear-gradient(135deg, var(--color-primary-purple), var(--color-primary-blue));
-    --gradient-accent: linear-gradient(135deg, var(--color-accent-light-blue), var(--color-accent-mint));
-    --gradient-hero: linear-gradient(135deg, #F238E6 0%, #741BF2 50%, #2350D9 100%);
-    --gradient-text: linear-gradient(90deg, var(--color-primary-pink), var(--color-primary-purple), var(--color-primary-blue));
+    --primary: #741BF2;
+    /* Violet - PRIMARY CTAs ONLY */
+    --secondary: #2350D9;
+    /* Blue - Secondary elements, icons */
+    --accent-light: #A7DDF2;
+    /* Sky Blue - Subtle backgrounds */
+    --accent-mint: #BDF2E8;
+    /* Mint - Very subtle details */
+    --brand-magenta: #F238E6;
+    /* Logo ONLY */
 
-    /* Neutral Colors */
-    --color-white: #FFFFFF;
-    --color-gray-50: #F9FAFB;
-    --color-gray-100: #F3F4F6;
-    --color-gray-200: #E5E7EB;
-    --color-gray-300: #D1D5DB;
-    --color-gray-400: #9CA3AF;
-    --color-gray-500: #6B7280;
-    --color-gray-600: #4B5563;
-    --color-gray-700: #374151;
-    --color-gray-800: #1F2937;
-    --color-gray-900: #111827;
-    --color-black: #000000;
+    /* ============================================
+       NEUTRAL BASE - USE ABUNDANTLY (80%)
+       ============================================ */
 
-    /* Semantic Colors */
-    --color-success: #10B981;
-    --color-warning: #F59E0B;
-    --color-error: #EF4444;
-    --color-info: var(--color-primary-blue);
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F9FAFB;
+    --bg-tertiary: #F3F4F6;
+    --bg-quaternary: #E5E7EB;
 
-    /* Typography */
-    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    --font-weight-light: 300;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
+    --text-primary: #0F172A;
+    /* Dark gray for headings */
+    --text-secondary: #475569;
+    /* Medium gray for body */
+    --text-tertiary: #94A3B8;
+    /* Light gray for muted text */
+    --text-disabled: #CBD5E1;
 
-    /* Font Sizes */
+    --border-light: #F3F4F6;
+    --border: #E2E8F0;
+    --border-medium: #CBD5E1;
+    --border-dark: #94A3B8;
+
+    /* ============================================
+       SUBTLE SHADOWS (NO GLOW)
+       ============================================ */
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.03);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+
+    /* ============================================
+       TYPOGRAPHY - PROFESSIONAL
+       ============================================ */
+
+    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
     --font-size-xs: 0.75rem;
     /* 12px */
     --font-size-sm: 0.875rem;
@@ -66,12 +75,23 @@
     --font-size-7xl: 4.5rem;
     /* 72px */
 
-    /* Line Heights */
-    --line-height-tight: 1.25;
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.75;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
 
-    /* Spacing Scale */
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
+
+    /* ============================================
+       GENEROUS SPACING - PROFESSIONAL
+       ============================================ */
+
     --spacing-1: 0.25rem;
     /* 4px */
     --spacing-2: 0.5rem;
@@ -99,7 +119,10 @@
     --spacing-32: 8rem;
     /* 128px */
 
-    /* Border Radius */
+    /* ============================================
+       SUBTLE BORDER RADIUS
+       ============================================ */
+
     --radius-sm: 0.25rem;
     /* 4px */
     --radius-md: 0.5rem;
@@ -112,45 +135,53 @@
     /* 24px */
     --radius-full: 9999px;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-glow: 0 0 20px rgba(242, 56, 230, 0.3);
-    --shadow-glow-hover: 0 0 30px rgba(242, 56, 230, 0.5);
+    /* ============================================
+       SUBTLE TRANSITIONS
+       ============================================ */
 
-    /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-bg-darker: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-blur: blur(10px);
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
 
-    /* Transitions */
-    --transition-fast: 150ms ease-in-out;
-    --transition-base: 300ms ease-in-out;
-    --transition-slow: 500ms ease-in-out;
+    /* ============================================
+       LAYOUT
+       ============================================ */
 
-    /* Z-Index Scale */
+    --container-xl: 1280px;
+    --container-lg: 1024px;
+    --container-md: 768px;
+
+    --header-height: 72px;
+
     --z-dropdown: 1000;
     --z-sticky: 1020;
-    --z-fixed: 1030;
-    --z-modal-backdrop: 1040;
     --z-modal: 1050;
-    --z-popover: 1060;
-    --z-tooltip: 1070;
 
-    /* Container Widths */
-    --container-sm: 640px;
-    --container-md: 768px;
-    --container-lg: 1024px;
-    --container-xl: 1280px;
-    --container-2xl: 1536px;
+    --color-white: #FFFFFF;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #E2E8F0;
+    --color-gray-600: #475569;
+    --color-gray-700: #374151;
+    --color-gray-800: #1F2937;
+    --color-gray-900: #0F172A;
+    --color-primary-purple: var(--primary);
+    --color-primary-blue: var(--secondary);
+    --color-success: #10B981;
+    --color-error: #EF4444;
+    --color-warning: #F59E0B;
+    --gradient-text: linear-gradient(90deg, #DB42EA, #A443F2, #3A53DE);
+    --gradient-primary: linear-gradient(135deg, #DB42EA, #A443F2, #3A53DE);
+    --gradient-hero: linear-gradient(135deg, rgba(219, 66, 234, 0.15), rgba(164, 67, 242, 0.12), rgba(58, 83, 222, 0.15));
 
-    /* Breakpoints */
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1440px;
+    /* ============================================
+       POSITIONS
+       ============================================ */
+
+    --position-relative: relative;
+    --position-absolute: absolute;
+    --position-fixed: fixed;
+    --position-sticky: sticky;
+
 }

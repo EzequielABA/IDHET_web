@@ -31,7 +31,7 @@ export const useIntersectionObserver = (options = {}) => {
                 observer.unobserve(element);
             }
         };
-    }, [hasAnimated, options.threshold, options.rootMargin]);
+    }, [hasAnimated, options]);
 
     return [elementRef, isVisible];
 };

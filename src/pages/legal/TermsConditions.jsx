@@ -15,7 +15,7 @@ const TermsConditions = () => {
                     <div className="legal-text">
                         <h2>1. Aceptación de Términos</h2>
                         <p>
-                            Al acceder y utilizar los servicios de IDHET, aceptas estar sujeto a estos términos
+                            Al acceder y utilizar los servicios de IDHET SRL, aceptas estar sujeto a estos términos
                             y condiciones.
                         </p>
 
@@ -41,13 +41,13 @@ const TermsConditions = () => {
 
                         <h2>5. Propiedad Intelectual</h2>
                         <p>
-                            Todo el contenido, marcas y materiales en nuestros servicios son propiedad de IDHET
+                            Todo el contenido, marcas y materiales en nuestros servicios son propiedad de IDHET SRL
                             o sus licenciantes.
                         </p>
 
                         <h2>6. Limitación de Responsabilidad</h2>
                         <p>
-                            IDHET no será responsable por daños indirectos, incidentales o consecuentes
+                            IDHET SRL no será responsable por daños indirectos, incidentales o consecuentes
                             derivados del uso de nuestros servicios.
                         </p>
 

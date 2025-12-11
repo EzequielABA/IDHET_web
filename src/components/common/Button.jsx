@@ -17,7 +17,7 @@ const Button = ({
         'btn',
         `btn-${variant}`,
         `btn-${size}`,
-        fullWidth && 'btn-fullwidth',
+        fullWidth && 'btn-full-width',
         loading && 'btn-loading',
         className,
     ].filter(Boolean).join(' ');

@@ -14,6 +14,7 @@ const Solutions = () => {
                 subtitle="Tecnología Innovadora"
                 description="Desarrollamos soluciones digitales que transforman la manera en que interactúas con servicios públicos y privados en República Dominicana."
                 gradient
+                decor="diagonal"
             />
 
             <section className="solutions-detail-section section">

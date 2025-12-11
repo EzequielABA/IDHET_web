@@ -46,6 +46,7 @@
 }
 
 .mv-icon {
+    margin: 0 auto;
     font-size: 80px;
     margin-bottom: var(--spacing-4);
     color: var(--color-primary-purple);

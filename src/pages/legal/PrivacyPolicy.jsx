@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
                     <div className="legal-text">
                         <h2>1. Introducción</h2>
                         <p>
-                            En IDHET, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta política
+                            En IDHET SRL, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta política
                             describe cómo recopilamos, usamos y protegemos tu información personal.
                         </p>
 

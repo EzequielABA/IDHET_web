@@ -1,24 +1,125 @@
 .card {
-    background: var(--color-white);
-    border-radius: var(--radius-2xl);
-    padding: var(--spacing-6);
-    box-shadow: var(--shadow-md);
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-8);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
 }
 
-.card-glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+/* Subtle gradient accent on hover */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
 }
 
 .card-hoverable:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
 }
 
+/* Icon container in cards */
+.card-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(116, 27, 242, 0.1), rgba(35, 80, 217, 0.1));
+    color: var(--primary);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-4);
+    transition: all var(--transition-base);
+}
+
+.card:hover .card-icon {
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* Card title */
+.card-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-3);
+}
+
+/* Card description */
+.card-description {
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Glass variant - more vibrant */
+.card-glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(116, 27, 242, 0.1);
+}
+
+.card-glass:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: var(--primary);
+}
+
+/* Elevated variant with gradient shadow */
+.card-elevated {
+    box-shadow:
+        var(--shadow-md),
+        0 4px 20px rgba(116, 27, 242, 0.08);
+}
+
+.card-elevated:hover {
+    box-shadow:
+        var(--shadow-xl),
+        0 8px 30px rgba(116, 27, 242, 0.15);
+}
+
+/* Card with top accent */
+.card-accent {
+    border-top: 3px solid var(--primary);
+    position: relative;
+}
+
+.card-accent::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.card-accent:hover::after {
+    opacity: 1;
+}
+
+/* Gradient variant - subtle */
 .card-gradient {
-    color: var(--color-white);
+    background: linear-gradient(135deg, #FFFFFF 0%, rgba(167, 221, 242, 0.05) 100%);
+    border: 1px solid rgba(116, 27, 242, 0.1);
+}
+
+.card-gradient:hover {
+    background: linear-gradient(135deg, #FFFFFF 0%, rgba(116, 27, 242, 0.08) 100%);
 }

@@ -8,19 +8,19 @@ export const faqData = [
     },
     {
         id: 2,
-        category: 'MetroCard',
-        question: '¿Qué es MetroCard?',
-        answer: 'MetroCard es la única aplicación que permite recargar la tarjeta del Metro y Teleférico de Santo Domingo completamente online, en menos de 30 segundos y desde cualquier lugar.'
+        category: 'MoveCard',
+        question: '¿Qué es MoveCard?',
+        answer: 'MoveCard es la única aplicación que permite recargar la tarjeta del Metro y Teleférico de Santo Domingo completamente online, en menos de 30 segundos y desde cualquier lugar.'
     },
     {
         id: 3,
-        category: 'MetroCard',
+        category: 'MoveCard',
         question: '¿Cómo puedo recargar mi tarjeta del metro?',
-        answer: 'Descarga la app MetroCard, registra tu tarjeta, selecciona el monto a recargar, realiza el pago de forma segura y tu recarga estará disponible en segundos. Todo el proceso toma menos de 30 segundos.'
+        answer: 'Descarga la app MoveCard, registra tu tarjeta, selecciona el monto a recargar, realiza el pago de forma segura y tu recarga estará disponible en segundos. Todo el proceso toma menos de 30 segundos.'
     },
     {
         id: 4,
-        category: 'MetroCard',
+        category: 'MoveCard',
         question: '¿Es seguro recargar mi tarjeta por la app?',
         answer: 'Sí, absolutamente. Utilizamos tecnología de encriptación de última generación y cumplimos con todos los estándares de seguridad internacionales para proteger tus datos y transacciones.'
     },
@@ -33,7 +33,7 @@ export const faqData = [
     {
         id: 6,
         category: 'Servicios',
-        question: '¿Qué otros servicios ofrece IDHET además de MetroCard?',
+        question: '¿Qué otros servicios ofrece IDHET además de MoveCard?',
         answer: 'Ofrecemos soluciones de pagos electrónicos, plataformas de movilidad urbana y desarrollo de soluciones digitales personalizadas para empresas y instituciones.'
     },
     {
@@ -50,7 +50,7 @@ export const faqData = [
     },
     {
         id: 9,
-        category: 'MetroCard',
+        category: 'MoveCard',
         question: '¿Cuánto tiempo tarda en reflejarse mi recarga?',
         answer: 'Las recargas se reflejan de forma inmediata en tu tarjeta, generalmente en menos de 30 segundos después de completar el pago.'
     },
@@ -63,7 +63,7 @@ export const faqData = [
 ];
 
 // Group FAQs by category
-export const faqCategories = ['Todos', 'General', 'MetroCard', 'Pagos', 'Servicios', 'Soporte'];
+export const faqCategories = ['Todos', 'General', 'MoveCard', 'Pagos', 'Servicios', 'Soporte'];
 
 export const getFAQsByCategory = (category) => {
     if (category === 'Todos') return faqData;

@@ -5,18 +5,19 @@ import SectionTitle from '../components/ui/SectionTitle';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import FAQItem from '../components/ui/FAQItem';
+import Icon from '../components/ui/Icon';
 import { metroCardFeatures } from '../data/solutions.data';
 import { faqData } from '../data/faq.data';
-import './MetroCar.css';
+import './MoveCard.css';
 
-const MetroCar = () => {
+const MoveCard = () => {
     const navigate = useNavigate();
-    const metroCardFAQs = faqData.filter(faq => faq.category === 'MetroCard');
+    const moveCardFAQs = faqData.filter(faq => faq.category === 'MoveCard');
 
     return (
-        <div className="metrocar-page">
+        <div className="movecard-page">
             <Hero
-                title="MetroCard: Recarga en 30 Segundos"
+                title="MoveCard: Recarga en 30 Segundos"
                 subtitle="La App del Metro"
                 description="La única aplicación que te permite recargar tu tarjeta del Metro y Teleférico de Santo Domingo completamente online."
                 primaryCTA={{
@@ -28,6 +29,7 @@ const MetroCar = () => {
                     onClick: () => window.open('#', '_blank')
                 }}
                 gradient
+                decor="diagonal"
             />
 
             <section className="how-it-works-section section">
@@ -41,6 +43,9 @@ const MetroCar = () => {
                     <div className="steps-grid">
                         {metroCardFeatures.map((step, index) => (
                             <Card key={index} hoverable className="step-card">
+                                <div className="step-icon" style={{ background: 'var(--gradient-primary)' }}>
+                                    <Icon name={step.icon} size={28} color="white" />
+                                </div>
                                 <div className="step-number">{step.step}</div>
                                 <h3 className="step-title">{step.title}</h3>
                                 <p className="step-description">{step.description}</p>
@@ -54,7 +59,7 @@ const MetroCar = () => {
                 <div className="container">
                     <SectionTitle
                         subtitle="Beneficios"
-                        title="¿Por qué usar MetroCard?"
+                        title="¿Por qué usar MoveCard?"
                         gradient
                     />
 
@@ -98,12 +103,12 @@ const MetroCar = () => {
                 <div className="container">
                     <SectionTitle
                         subtitle="Preguntas Frecuentes"
-                        title="Dudas sobre MetroCard"
+                        title="Dudas sobre MoveCard"
                         gradient
                     />
 
                     <div className="faq-list">
-                        {metroCardFAQs.map((faq) => (
+                        {moveCardFAQs.map((faq) => (
                             <FAQItem key={faq.id} question={faq.question} answer={faq.answer} />
                         ))}
                     </div>
@@ -115,7 +120,7 @@ const MetroCar = () => {
                     <div className="cta-content">
                         <h2 className="cta-title">¿Listo para empezar?</h2>
                         <p className="cta-description">
-                            Descarga MetroCard ahora y olvídate de las filas
+                            Descarga MoveCard ahora y olvídate de las filas
                         </p>
                         <div className="cta-buttons">
                             <Button variant="primary" size="large">
@@ -132,4 +137,4 @@ const MetroCar = () => {
     );
 };
 
-export default MetroCar;
+export default MoveCard;

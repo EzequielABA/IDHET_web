@@ -12,29 +12,23 @@
 
 .carousel-track {
     display: flex;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-slide {
     min-width: 100%;
     flex-shrink: 0;
-    opacity: 0.4;
-    transition: opacity 0.6s ease;
+    padding: 0 var(--spacing-2);
 }
 
-.carousel-slide.active {
-    opacity: 1;
-}
-
-/* Navigation Arrows */
+/* Modern arrow buttons */
 .carousel-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--color-primary-purple);
-    border: none;
+    z-index: 10;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
     width: 48px;
     height: 48px;
     border-radius: var(--radius-full);
@@ -42,120 +36,163 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-}
-
-.carousel:hover .carousel-arrow {
-    opacity: 1;
+    color: var(--text-primary);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
 }
 
 .carousel-arrow:hover {
-    background: var(--gradient-primary);
-    color: var(--color-white);
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 30px rgba(124, 58, 237, 0.4);
-}
-
-.carousel-arrow:active {
-    transform: translateY(-50%) scale(0.95);
+    box-shadow: var(--shadow-lg);
 }
 
 .carousel-arrow-left {
-    left: var(--spacing-4);
+    left: -24px;
 }
 
 .carousel-arrow-right {
-    right: var(--spacing-4);
+    right: -24px;
 }
 
-/* Dots Navigation */
+/* Modern dots */
 .carousel-dots {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: var(--spacing-2);
     margin-top: var(--spacing-6);
 }
 
 .carousel-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: var(--radius-full);
-    background: var(--color-gray-300);
+    background: var(--border-medium);
     border: none;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-base);
     padding: 0;
-    position: relative;
-    overflow: hidden;
 }
 
-.carousel-dot::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-primary);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.carousel-dot:hover::before {
-    opacity: 0.5;
+.carousel-dot:hover {
+    background: var(--secondary);
+    transform: scale(1.2);
 }
 
 .carousel-dot.active {
     width: 32px;
-    background: var(--gradient-primary);
-    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+    background: var(--primary);
 }
 
-.carousel-dot.active::before {
-    opacity: 1;
+/* Testimonial Card Redesign */
+.testimonial-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+}
+
+/* Quote icon */
+.testimonial-quote {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-4);
+    opacity: 0.9;
+}
+
+/* Testimonial content */
+.testimonial-content {
+    margin-bottom: var(--spacing-6);
+}
+
+.testimonial-text {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: var(--spacing-6);
+}
+
+/* Author section */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-info {
+    flex: 1;
+}
+
+.testimonial-name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-1);
+}
+
+.testimonial-title {
+    font-size: var(--font-size-sm);
+    color: var(--text-tertiary);
+}
+
+/* Rating stars */
+.testimonial-rating {
+    display: flex;
+    gap: var(--spacing-1);
+    margin-top: var(--spacing-3);
+}
+
+.testimonial-rating svg {
+    color: #FFC107;
+    font-size: var(--font-size-lg);
+}
+
+/* Grid layout for testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        opacity: 1;
+        display: none;
     }
 
-    .carousel-arrow-left {
-        left: var(--spacing-2);
+    .testimonials-grid {
+        grid-template-columns: 1fr;
     }
 
-    .carousel-arrow-right {
-        right: var(--spacing-2);
+    .testimonial-text {
+        font-size: var(--font-size-base);
     }
-
-    .carousel-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .carousel-dot.active {
-        width: 24px;
-    }
-}
-
-/* Animation variants */
-.carousel-fade .carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.carousel-fade .carousel-track {
-    position: relative;
-    height: 100%;
 }

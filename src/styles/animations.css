@@ -212,18 +212,6 @@
     }
 }
 
-/* Glow */
-@keyframes glow {
-
-    0%,
-    100% {
-        box-shadow: 0 0 5px rgba(242, 56, 230, 0.5);
-    }
-
-    50% {
-        box-shadow: 0 0 20px rgba(242, 56, 230, 0.8), 0 0 30px rgba(116, 27, 242, 0.6);
-    }
-}
 
 /* Animation Utility Classes */
 .animate-fadeIn {
@@ -274,9 +262,6 @@
     animation: spin 1s linear infinite;
 }
 
-.animate-glow {
-    animation: glow 2s ease-in-out infinite;
-}
 
 /* Delay Utilities */
 .delay-100 {

@@ -1,8 +1,8 @@
 // SEO Configuration
 export const seoConfig = {
     defaultTitle: 'IDHET - Soluciones Digitales para República Dominicana',
-    defaultDescription: 'Empresa tecnológica dominicana especializada en movilidad urbana y pagos electrónicos. Conoce MetroCard, la app para recargar tu tarjeta del metro online.',
-    defaultKeywords: 'IDHET, MetroCard, Metro Santo Domingo, recarga metro, pagos electrónicos, movilidad urbana, República Dominicana, tecnología RD',
+    defaultDescription: 'Empresa tecnológica dominicana especializada en movilidad urbana y pagos electrónicos. Conoce MoveCard, la app para recargar tu tarjeta del metro online.',
+    defaultKeywords: 'IDHET, MoveCard, Metro Santo Domingo, recarga metro, pagos electrónicos, movilidad urbana, República Dominicana, tecnología RD',
     siteUrl: 'https://idhet.com',
     ogImage: '/og-image.jpg',
     twitterHandle: '@IDHET_RD',
@@ -20,8 +20,12 @@ export const seoConfig = {
             title: 'Soluciones Tecnológicas - IDHET',
             description: 'Descubre nuestras soluciones en movilidad urbana, pagos electrónicos y desarrollo digital personalizado.',
         },
-        metrocard: {
-            title: 'MetroCard - Recarga tu Metro Online en 30 Segundos',
+        services: {
+            title: 'Servicios - IDHET',
+            description: 'Portafolio de servicios: desarrollo a medida, pagos electrónicos, movilidad urbana y seguridad.',
+        },
+        movecard: {
+            title: 'MoveCard - Recarga tu Metro Online en 30 Segundos',
             description: 'La única app para recargar tu tarjeta del Metro y Teleférico de Santo Domingo completamente online. Rápido, seguro y fácil.',
         },
         faq: {

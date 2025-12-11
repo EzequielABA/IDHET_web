@@ -1,15 +1,14 @@
 import { useNavigate } from 'react-router-dom';
-import { FaMobileAlt, FaLock, FaClock, FaStar, FaCheckCircle, FaCreditCard } from 'react-icons/fa';
+import { FaMobileAlt, FaLock, FaClock, FaCheckCircle, FaCreditCard } from 'react-icons/fa';
 import Hero from '../components/features/hero/Hero';
 import Card from '../components/common/Card';
 import SectionTitle from '../components/ui/SectionTitle';
 import FAQItem from '../components/ui/FAQItem';
 import Button from '../components/common/Button';
 import Icon from '../components/ui/Icon';
-import Carousel from '../components/ui/Carousel';
+import Testimonials from '../components/features/testimonials/Testimonials';
 import { solutions } from '../data/solutions.data';
 import { benefits } from '../data/benefits.data';
-import { testimonials } from '../data/testimonials.data';
 import { faqData } from '../data/faq.data';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import './Home.css';
@@ -20,7 +19,7 @@ const Home = () => {
     const [refSolutions, isVisibleSolutions] = useIntersectionObserver();
     const [refMetroCard, isVisibleMetroCard] = useIntersectionObserver();
     const [refBenefits, isVisibleBenefits] = useIntersectionObserver();
-    const [refTestimonials, isVisibleTestimonials] = useIntersectionObserver();
+    const [refTestimonials] = useIntersectionObserver();
 
     const featuredFAQs = faqData.slice(0, 5);
 
@@ -32,14 +31,15 @@ const Home = () => {
                 subtitle="IDHET"
                 description="Desarrollamos soluciones digitales que simplifican la vida cotidiana, con enfoque especial en movilidad urbana y pagos electrónicos."
                 primaryCTA={{
-                    text: 'Conoce MetroCard',
-                    onClick: () => navigate('/metrocard')
+                    text: 'Conoce MoveCard',
+                    onClick: () => navigate('/movecard')
                 }}
                 secondaryCTA={{
                     text: 'Nuestras Soluciones',
                     onClick: () => navigate('/solutions')
                 }}
                 gradient
+                decor="blobs"
             />
 
             {/* About Section */}
@@ -53,12 +53,12 @@ const Home = () => {
                         />
                         <div className="about-text">
                             <p>
-                                IDHET es una empresa tecnológica dominicana creada para desarrollar soluciones digitales
+                                IDHET SRL es una empresa tecnológica dominicana creada para desarrollar soluciones digitales
                                 que simplifiquen la vida cotidiana de la población, con enfoque especial en movilidad
                                 urbana y pagos electrónicos.
                             </p>
                             <p>
-                                Nuestro primer y actual producto estrella, <strong>MetroCard</strong>, es la única aplicación
+                                Nuestro primer y actual producto estrella, <strong>MoveCard</strong>, es la única aplicación
                                 que permite recargar la tarjeta del Metro y Teleférico de Santo Domingo completamente online,
                                 en menos de 30 segundos y desde cualquier lugar.
                             </p>
@@ -116,7 +116,7 @@ const Home = () => {
                         <div className="metrocard-text">
                             <SectionTitle
                                 subtitle="Producto Estrella"
-                                title="MetroCard: Recarga tu metro en 30 segundos"
+                                title="MoveCard: Recarga tu metro en 30 segundos"
                                 align="left"
                                 gradient
                             />
@@ -131,17 +131,18 @@ const Home = () => {
                                 <li><FaClock /> Disponible 24/7</li>
                             </ul>
                             <div className="metrocard-cta">
-                                <Button variant="primary" size="large" onClick={() => navigate('/metrocard')}>
-                                    Conocer MetroCard
+                                <Button variant="primary" size="large" onClick={() => navigate('/movecard')}>
+                                    Conocer MoveCard
                                 </Button>
                             </div>
                         </div>
                         <div className="metrocard-visual">
                             <div className="metrocard-mockup">
-                                <img src="/assets/images/metrocard-mockup.png" alt="MetroCard App" />
+                                <img src="/assets/images/metrocard-mockup.png" alt="MoveCard App" />
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </section>
 
@@ -149,7 +150,7 @@ const Home = () => {
             <section className="benefits-section section bg-gray-100" ref={refBenefits}>
                 <div className="container">
                     <SectionTitle
-                        subtitle="¿Por qué IDHET?"
+                        subtitle="¿Por qué IDHET SRL?"
                         title="Beneficios que nos distinguen"
                         gradient
                     />
@@ -173,48 +174,9 @@ const Home = () => {
             </section>
 
             {/* Testimonials Section */}
-            <section className="testimonials-section section" ref={refTestimonials}>
-                <div className="container">
-                    <SectionTitle
-                        subtitle="Testimonios"
-                        title="Lo que dicen nuestros usuarios"
-                        gradient
-                    />
-                    <div className={`testimonials-carousel ${isVisibleTestimonials ? 'animate-fadeInUp' : ''}`}>
-                        <Carousel
-                            autoPlay={true}
-                            interval={4000}
-                            showArrows={true}
-                            showDots={true}
-                            pauseOnHover={true}
-                        >
-                            {testimonials.map((testimonial) => (
-                                <Card
-                                    key={testimonial.id}
-                                    hoverable
-                                    className="testimonial-card-carousel"
-                                >
-                                    <div className="testimonial-content">
-                                        <div className="testimonial-avatar" style={{ background: testimonial.gradient }}>
-                                            <Icon name={testimonial.avatar} size={48} color="white" />
-                                        </div>
-                                        <p className="testimonial-text">"{testimonial.content}"</p>
-                                        <div className="testimonial-author">
-                                            <strong>{testimonial.name}</strong>
-                                            <span>{testimonial.role}</span>
-                                        </div>
-                                        <div className="testimonial-rating">
-                                            {Array.from({ length: testimonial.rating }).map((_, i) => (
-                                                <FaStar key={i} color="#FFD700" size={20} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                </Card>
-                            ))}
-                        </Carousel>
-                    </div>
-                </div>
-            </section>
+            <div ref={refTestimonials}>
+                <Testimonials />
+            </div>
 
             {/* FAQ Preview */}
             <section className="faq-preview-section section bg-gray-100">

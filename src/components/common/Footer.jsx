@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram, FaHeart } from 'react-icons/fa';
 import { footerLinks } from '../../data/navigation.data';
-import { APP_NAME } from '../../utils/constants';
+import { APP_NAME, APP_NAME_2, APP_NAME_IMG } from '../../utils/constants';
 import './Footer.css';
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="footer-grid">
                     {/* Brand Section */}
                     <div className="footer-section">
-                        <h3 className="footer-brand gradient-text">{APP_NAME}</h3>
+                        <h3 className="footer-brand gradient-text">{APP_NAME} <span className="footer-suffix">SRL</span></h3>
                         <p className="footer-description">
                             Soluciones digitales que simplifican la vida cotidiana en República Dominicana.
                         </p>
@@ -72,9 +72,9 @@ const Footer = () => {
                     <p className="footer-copyright">
                         © {currentYear} {APP_NAME}. Todos los derechos reservados.
                     </p>
-                    <p className="footer-made">
-                        Hecho con <FaHeart style={{ color: '#741BF2', display: 'inline' }} /> en República Dominicana
-                    </p>
+                    {/* <p className="footer-made">
+                        <FaLocationArrow style={{ color: '#741BF2', display: 'inline' }} /> República Dominicana
+                    </p> */}
                 </div>
             </div>
         </footer>

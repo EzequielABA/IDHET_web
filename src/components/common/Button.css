@@ -10,192 +10,105 @@
     line-height: 1.2;
     text-decoration: none;
     border: none;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-base);
     position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    z-index: 1;
-}
-
-/* Ripple effect */
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
-    z-index: -1;
-}
-
-.btn:hover::before {
-    width: 400px;
-    height: 400px;
-}
-
-/* Shine effect */
-.btn::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -100%;
-    width: 50%;
-    height: 200%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent);
-    transform: skewX(-20deg);
-    transition: left 0.6s ease;
-    z-index: -1;
-}
-
-.btn:hover::after {
-    left: 200%;
 }
 
 .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    transform: none !important;
 }
 
-.btn:disabled::after {
-    display: none;
-}
+/* ============================================
+   PRIMARY BUTTON - Corporate Color
+   ============================================ */
 
-/* Primary Variant */
 .btn-primary {
-    background: linear-gradient(135deg, #F238E6 0%, #741BF2 50%, #5928E5 100%);
-    color: var(--color-white);
-    box-shadow:
-        0 6px 20px rgba(242, 56, 230, 0.4),
-        0 2px 8px rgba(116, 27, 242, 0.3),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    background: var(--primary);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover:not(:disabled) {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow:
-        0 12px 35px rgba(242, 56, 230, 0.5),
-        0 8px 20px rgba(116, 27, 242, 0.4),
-        0 0 40px rgba(242, 56, 230, 0.3),
-        inset 0 1px 2px rgba(255, 255, 255, 0.3);
-    filter: brightness(1.1);
+    background: linear-gradient(90deg, #DB42EA, #A443F2, #3A53DE);
+    background-size: 200% 200%;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px) scale(1.02);
 }
 
 .btn-primary:active:not(:disabled) {
-    transform: translateY(-1px) scale(1);
-    box-shadow:
-        0 4px 15px rgba(242, 56, 230, 0.4),
-        0 2px 8px rgba(116, 27, 242, 0.3);
+    transform: translateY(0) scale(1);
+    box-shadow: var(--shadow-sm);
 }
 
-/* Secondary Variant */
+/* ============================================
+   SECONDARY BUTTON - Outline Gray
+   ============================================ */
+
 .btn-secondary {
-    background: linear-gradient(135deg, #2350D9 0%, #3B82F6 50%, #60A5FA 100%);
-    color: var(--color-white);
-    box-shadow:
-        0 6px 20px rgba(35, 80, 217, 0.4),
-        0 2px 8px rgba(59, 130, 246, 0.3),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-medium);
+    box-shadow: var(--shadow-xs);
 }
 
 .btn-secondary:hover:not(:disabled) {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow:
-        0 12px 35px rgba(35, 80, 217, 0.5),
-        0 8px 20px rgba(59, 130, 246, 0.4),
-        0 0 40px rgba(35, 80, 217, 0.3),
-        inset 0 1px 2px rgba(255, 255, 255, 0.3);
-    filter: brightness(1.1);
+    background: var(--bg-secondary);
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px) scale(1.02);
 }
 
 .btn-secondary:active:not(:disabled) {
-    transform: translateY(-1px) scale(1);
-    box-shadow:
-        0 4px 15px rgba(35, 80, 217, 0.4),
-        0 2px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(0) scale(1);
 }
 
-/* Outlined Variant */
+/* ============================================
+   OUTLINED BUTTON - Corporate Color Outline
+   ============================================ */
+
 .btn-outlined {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
-    color: var(--color-primary-purple);
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-    box-shadow:
-        0 2px 12px rgba(124, 58, 237, 0.15),
-        inset 0 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-.btn-outlined::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: var(--radius-xl);
-    padding: 2px;
-    background: linear-gradient(135deg, #F238E6, #741BF2, #2350D9);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    z-index: -2;
-    transition: all 0.3s ease;
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .btn-outlined:hover:not(:disabled) {
-    background: linear-gradient(135deg, #F238E6 0%, #741BF2 50%, #5928E5 100%);
-    color: var(--color-white);
+    background: var(--primary);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-sm);
     transform: translateY(-2px) scale(1.02);
-    box-shadow:
-        0 8px 25px rgba(124, 58, 237, 0.35),
-        0 4px 15px rgba(242, 56, 230, 0.25),
-        0 0 30px rgba(116, 27, 242, 0.2);
 }
 
 .btn-outlined:active:not(:disabled) {
     transform: translateY(0) scale(1);
-    box-shadow:
-        0 4px 15px rgba(124, 58, 237, 0.25),
-        0 2px 8px rgba(242, 56, 230, 0.2);
 }
 
-/* Ghost Variant */
+/* ============================================
+   GHOST BUTTON - Minimal
+   ============================================ */
+
 .btn-ghost {
     background: transparent;
-    color: var(--color-primary-purple);
-    font-weight: var(--font-weight-semibold);
-}
-
-.btn-ghost::before {
-    background: rgba(124, 58, 237, 0.15);
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
 }
 
 .btn-ghost:hover:not(:disabled) {
-    background: rgba(124, 58, 237, 0.12);
-    backdrop-filter: blur(10px);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+    background: var(--bg-secondary);
+    color: var(--primary);
 }
 
-.btn-ghost:active:not(:disabled) {
-    transform: translateY(0);
-    background: rgba(124, 58, 237, 0.18);
-}
+/* ============================================
+   SIZES
+   ============================================ */
 
-/* Sizes */
 .btn-small {
     padding: var(--spacing-2) var(--spacing-4);
     font-size: var(--font-size-sm);
-    border-radius: var(--radius-lg);
 }
 
 .btn-medium {
@@ -206,77 +119,39 @@
 .btn-large {
     padding: var(--spacing-4) var(--spacing-8);
     font-size: var(--font-size-lg);
-    border-radius: 14px;
-    min-height: 56px;
-    font-weight: var(--font-weight-bold);
 }
 
-/* Full Width */
-.btn-fullwidth {
-    width: 100%;
-}
+/* ============================================
+   STATES
+   ============================================ */
 
-/* Loading State */
 .btn-loading {
-    pointer-events: none;
-    opacity: 0.8;
     position: relative;
+    pointer-events: none;
+    color: transparent;
 }
 
-.btn-loader {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 2.5px solid rgba(255, 255, 255, 0.3);
-    border-top-color: var(--color-white);
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid currentColor;
     border-radius: 50%;
-    animation: buttonSpin 0.7s linear infinite;
+    border-top-color: transparent;
+    animation: spin 0.6s linear infinite;
 }
 
-@keyframes buttonSpin {
+@keyframes spin {
     to {
         transform: rotate(360deg);
     }
 }
 
-/* Icon */
-.btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Pulse animation for primary CTA */
-@keyframes pulse {
-
-    0%,
-    100% {
-        box-shadow:
-            0 6px 20px rgba(242, 56, 230, 0.4),
-            0 2px 8px rgba(116, 27, 242, 0.3);
-    }
-
-    50% {
-        box-shadow:
-            0 6px 20px rgba(242, 56, 230, 0.6),
-            0 2px 8px rgba(116, 27, 242, 0.5),
-            0 0 25px rgba(242, 56, 230, 0.4);
-    }
-}
-
-.btn-primary.btn-pulse {
-    animation: pulse 2s ease-in-out infinite;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .btn {
-        padding: var(--spacing-2-5) var(--spacing-5);
-    }
-
-    .btn-large {
-        padding: var(--spacing-3-5) var(--spacing-7);
-        min-height: 52px;
-        font-size: var(--font-size-base);
-    }
+.btn-full-width {
+    width: 100%;
 }

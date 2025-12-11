@@ -1,4 +1,4 @@
-.metrocar-page {
+.movecard-page {
     margin-top: -80px;
 }
 
@@ -25,18 +25,28 @@
     gap: var(--spacing-3);
 }
 
-.step-number {
+.step-icon {
     width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gradient-primary);
-    color: var(--color-white);
-    font-size: var(--font-size-2xl);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     border-radius: var(--radius-full);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .step-title {

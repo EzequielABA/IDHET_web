@@ -1,5 +1,7 @@
 // Application Constants
-export const APP_NAME = 'IDHET';
+export const APP_NAME_IMG= '/src/assets/logo.png';
+export const APP_NAME= 'IDHET';
+export const APP_NAME_2= 'IDHET';
 export const APP_TAGLINE = 'Innovación Digital para República Dominicana';
 
 export const CONTACT_EMAIL = 'contacto@idhet.com';
@@ -14,8 +16,8 @@ export const SOCIAL_MEDIA = {
 };
 
 export const METROCARD_APP_LINKS = {
-    IOS: 'https://apps.apple.com/app/metrocard',
-    ANDROID: 'https://play.google.com/store/apps/details?id=com.idhet.metrocard',
+    IOS: 'https://apps.apple.com/app/movecard',
+    ANDROID: 'https://play.google.com/store/apps/details?id=com.idhet.movecard',
 };
 
 export const API_TIMEOUT = 10000; // 10 seconds
@@ -36,7 +38,7 @@ export const FORM_STATES = {
 
 export const CONTACT_REASONS = [
     { value: 'general', label: 'Consulta General' },
-    { value: 'metrocard', label: 'Soporte MetroCard' },
+    { value: 'metrocard', label: 'Soporte MoveCard' },
     { value: 'business', label: 'Oportunidad de Negocio' },
     { value: 'technical', label: 'Soporte Técnico' },
     { value: 'partnership', label: 'Alianza Estratégica' },

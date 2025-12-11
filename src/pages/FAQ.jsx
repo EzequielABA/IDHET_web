@@ -18,8 +18,9 @@ const FAQ = () => {
             <Hero
                 title="Preguntas Frecuentes"
                 subtitle="Centro de Ayuda"
-                description="Encuentra respuestas a las preguntas más comunes sobre IDHET y nuestros servicios."
+                description="Encuentra respuestas a las preguntas más comunes sobre IDHET SRL y nuestros servicios."
                 gradient
+                decor="grid"
             />
 
             <section className="faq-section section">

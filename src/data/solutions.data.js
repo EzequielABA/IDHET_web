@@ -1,8 +1,8 @@
 // Solutions Data
 export const solutions = [
     {
-        id: 'metrocard',
-        title: 'MetroCard',
+        id: 'movecard',
+        title: 'MoveCard',
         subtitle: 'Recarga tu tarjeta del metro online',
         description: 'La única aplicación que te permite recargar tu tarjeta del Metro y Teleférico de Santo Domingo completamente online, en menos de 30 segundos y desde cualquier lugar.',
         icon: 'card',
@@ -12,7 +12,7 @@ export const solutions = [
             'Seguro y confiable',
             'Disponible 24/7'
         ],
-        link: '/metrocard',
+        link: '/movecard',
         gradient: 'linear-gradient(135deg, #F238E6, #741BF2)'
     },
     {
@@ -66,26 +66,31 @@ export const metroCardFeatures = [
     {
         step: '1',
         title: 'Descarga la app',
-        description: 'Disponible para iOS y Android'
+        description: 'Disponible para iOS y Android',
+        icon: 'mobile'
     },
     {
         step: '2',
         title: 'Registra tu tarjeta',
-        description: 'Escanea o ingresa el código de tu MetroCard'
+        description: 'Escanea o ingresa el código de tu MetroCard',
+        icon: 'card'
     },
     {
         step: '3',
         title: 'Selecciona el monto',
-        description: 'Elige cuánto deseas recargar'
+        description: 'Elige cuánto deseas recargar',
+        icon: 'chart'
     },
     {
         step: '4',
         title: 'Realiza el pago',
-        description: 'Paga de forma segura con tu método preferido'
+        description: 'Paga de forma segura con tu método preferido',
+        icon: 'shield'
     },
     {
         step: '5',
         title: '¡Listo!',
-        description: 'Tu recarga estará disponible en segundos'
+        description: 'Tu recarga estará disponible en segundos',
+        icon: 'cloudDone'
     }
 ];

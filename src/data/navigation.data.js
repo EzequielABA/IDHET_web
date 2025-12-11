@@ -1,10 +1,11 @@
 // Navigation Data
 export const navigationLinks = [
-    { path: '/', label: 'Inicio' },
+    // { path: '/', label: 'Inicio' },
     { path: '/about', label: 'Nosotros' },
     { path: '/solutions', label: 'Soluciones' },
-    { path: '/metrocard', label: 'MoveCard' },
-    { path: '/faq', label: 'Preguntas' },
+    { path: '/services', label: 'Servicios' },
+    { path: '/movecard', label: 'MoveCard' },
+    { path: '/faq', label: 'FAQs' },
     { path: '/contact', label: 'Contacto' }
 ];
 
@@ -12,10 +13,11 @@ export const footerLinks = {
     company: [
         { path: '/about', label: 'Sobre IDHET' },
         { path: '/solutions', label: 'Soluciones' },
+        { path: '/services', label: 'Servicios' },
         { path: '/contact', label: 'Contacto' }
     ],
     products: [
-        { path: '/metrocard', label: 'MetroCard' },
+        { path: '/movecard', label: 'MoveCard' },
         { path: '/faq', label: 'Preguntas Frecuentes' }
     ],
     legal: [
