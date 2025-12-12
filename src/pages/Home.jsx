@@ -138,7 +138,7 @@ const Home = () => {
                         </div>
                         <div className="metrocard-visual">
                             <div className="metrocard-mockup">
-                                <img src="/assets/images/metrocard-mockup.png" alt="MoveCard App" />
+                                <img src="/assets/images/movecard-mockup.png" alt="MoveCard App" />
                             </div>
                         </div>
                     </div>
