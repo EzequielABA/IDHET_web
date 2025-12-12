@@ -5,6 +5,7 @@ export const ROUTES = {
     SOLUTIONS: '/solutions',
     SERVICES: '/services',
     MOVECARD: '/movecard',
+    QUIMICRAFT: '/quimicraft',
     FAQ: '/faq',
     CONTACT: '/contact',
     PRIVACY_POLICY: '/legal/privacy',

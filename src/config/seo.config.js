@@ -28,6 +28,10 @@ export const seoConfig = {
             title: 'MoveCard - Recarga tu Metro Online en 30 Segundos',
             description: 'La única app para recargar tu tarjeta del Metro y Teleférico de Santo Domingo completamente online. Rápido, seguro y fácil.',
         },
+        quimicraft: {
+            title: 'QuimiCraft - Ciencias Naturales Interactivas',
+            description: 'Plataforma interactiva para aprender Química con actividades visuales, didácticas y accesibles para secundaria.',
+        },
         faq: {
             title: 'Preguntas Frecuentes - IDHET',
             description: 'Encuentra respuestas a las preguntas más comunes sobre IDHET y nuestros servicios.',

@@ -2,6 +2,7 @@ import { FaBullseye, FaRocket } from 'react-icons/fa';
 import Hero from '../components/features/hero/Hero';
 import SectionTitle from '../components/ui/SectionTitle';
 import Card from '../components/common/Card';
+import Icon from '../components/ui/Icon';
 import { companyValues } from '../data/benefits.data';
 import './About.css';
 
@@ -26,7 +27,7 @@ const About = () => {
 
                     <div className="about-content-box">
                         <p className="about-lead">
-                            IDHET nace de la necesidad de transformar la manera en que los dominicanos acceden
+                            IDHET SRL nace de la necesidad de transformar la manera en que los dominicanos acceden
                             a servicios esenciales del día a día.
                         </p>
                         <p>
@@ -79,6 +80,11 @@ const About = () => {
                     <div className="values-grid">
                         {companyValues.map((item, index) => (
                             <Card key={index} hoverable className="value-card">
+                                {item.icon && (
+                                    <div className="value-icon" style={{ background: item.gradient }}>
+                                        <Icon name={item.icon} size={28} color="white" />
+                                    </div>
+                                )}
                                 <h4 className="value-title">{item.value}</h4>
                                 <p className="value-description">{item.description}</p>
                             </Card>

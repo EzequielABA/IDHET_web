@@ -76,6 +76,17 @@
     padding: var(--spacing-8);
 }
 
+.value-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-3);
+}
+
 .value-title {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);

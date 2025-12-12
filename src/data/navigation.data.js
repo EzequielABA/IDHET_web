@@ -18,12 +18,36 @@ export const footerLinks = {
     ],
     products: [
         { path: '/movecard', label: 'MoveCard' },
+        { path: '/quimicraft', label: 'QuimiCraft' },
         { path: '/faq', label: 'Preguntas Frecuentes' }
     ],
     legal: [
         { path: '/legal/privacy', label: 'Política de Privacidad' },
         { path: '/legal/terms', label: 'Términos y Condiciones' }
     ]
+};
+
+export const navigationTop = [
+    { label: 'Soluciones', group: 'solutions' },
+    { path: '/services', label: 'Servicios' },
+    { label: 'Empresa', group: 'company' },
+    { label: 'Ayuda', group: 'help' },
+];
+
+export const navigationGroups = {
+    solutions: [
+        { path: '/movecard', label: 'MoveCard' },
+        { path: '/quimicraft', label: 'QuimiCraft' },
+        { path: '/solutions', label: 'Pagos Electrónicos' },
+        { path: '/solutions', label: 'Movilidad Urbana' },
+    ],
+    company: [
+        { path: '/about', label: 'Sobre IDHET' },
+    ],
+    help: [
+        { path: '/faq', label: 'Preguntas Frecuentes' },
+        { path: '/contact', label: 'Contacto' },
+    ],
 };
 
 export const socialLinks = [

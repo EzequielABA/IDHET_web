@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Solutions from '../pages/Solutions';
 import Services from '../pages/Services';
+import QuimiCraft from '../pages/QuimiCraft';
 import MoveCard from '../pages/MoveCard';
 import FAQ from '../pages/FAQ';
 import Contact from '../pages/Contact';
@@ -21,6 +22,7 @@ const AppRoutes = () => {
                     <Route path={ROUTES.ABOUT} element={<About />} />
                     <Route path={ROUTES.SOLUTIONS} element={<Solutions />} />
                     <Route path={ROUTES.SERVICES} element={<Services />} />
+                    <Route path={ROUTES.QUIMICRAFT} element={<QuimiCraft />} />
                     <Route path={ROUTES.MOVECARD} element={<MoveCard />} />
                     <Route path={ROUTES.FAQ} element={<FAQ />} />
                     <Route path={ROUTES.CONTACT} element={<Contact />} />

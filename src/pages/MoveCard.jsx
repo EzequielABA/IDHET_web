@@ -19,10 +19,10 @@ const MoveCard = () => {
             <Hero
                 title="MoveCard: Recarga en 30 Segundos"
                 subtitle="La App del Metro"
-                description="La única aplicación que te permite recargar tu tarjeta del Metro y Teleférico de Santo Domingo completamente online."
+                description="La única aplicación que te permite recargar tu tarjeta del Metro, Teleférico y OMSA de Santo Domingo completamente online."
                 primaryCTA={{
                     text: 'Descargar para iOS',
-                    onClick: () => window.open('#', '_blank')
+                    onClick: () => window.open('https://www.figma.com/proto/Reu20JS7oEmNAlRlORnELV/MetroLand-App?node-id=13-15&starting-point-node-id=13%3A15', '_blank')
                 }}
                 secondaryCTA={{
                     text: 'Descargar para Android',
@@ -123,7 +123,7 @@ const MoveCard = () => {
                             Descarga MoveCard ahora y olvídate de las filas
                         </p>
                         <div className="cta-buttons">
-                            <Button variant="primary" size="large">
+                            <Button variant="primary" size="large"onClick={() => navigate('https://www.figma.com/proto/Reu20JS7oEmNAlRlORnELV/MetroLand-App?node-id=13-15&starting-point-node-id=13%3A15')}>
                                 Descargar Ahora
                             </Button>
                             <Button variant="outlined" size="large" onClick={() => navigate('/contact')}>

@@ -47,18 +47,26 @@ export const benefits = [
 export const companyValues = [
     {
         value: 'Innovación Constante',
-        description: 'Buscamos continuamente nuevas formas de mejorar la vida de nuestros usuarios a través de la tecnología.'
+        description: 'Buscamos continuamente nuevas formas de mejorar la vida de nuestros usuarios a través de la tecnología.',
+        icon: 'lightbulb',
+        gradient: 'linear-gradient(135deg, rgba(116,27,242,0.12), rgba(35,80,217))'
     },
     {
         value: 'Compromiso Social',
-        description: 'Trabajamos para democratizar el acceso a soluciones digitales en la República Dominicana.'
+        description: 'Trabajamos para democratizar el acceso a soluciones digitales en la República Dominicana.',
+        icon: 'target',
+        gradient: 'linear-gradient(135deg, rgba(35,80,217,0.12), rgba(167,221,242))'
     },
     {
         value: 'Excelencia Operativa',
-        description: 'Mantenemos los más altos estándares de calidad en cada producto y servicio que ofrecemos.'
+        description: 'Mantenemos los más altos estándares de calidad en cada producto y servicio que ofrecemos.',
+        icon: 'dashboard',
+        gradient: 'linear-gradient(135deg, rgba(167,221,242,0.12), rgba(189,242,232))'
     },
     {
         value: 'Orientación al Usuario',
-        description: 'Diseñamos pensando siempre en la mejor experiencia posible para nuestros usuarios.'
+        description: 'Diseñamos pensando siempre en la mejor experiencia posible para nuestros usuarios.',
+        icon: 'mobile',
+        gradient: 'linear-gradient(135deg, rgba(189,242,232,0.12), rgba(116,27,242))'
     }
 ];
